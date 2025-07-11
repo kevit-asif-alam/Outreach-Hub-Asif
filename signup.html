@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+  </head>
+  <body>
+    <div>
+      <h1>Outreach Hub</h1>
+      <h3>Register</h3><hr>
+
+      <form action="./index.html" method="get">
+        <label for="first"> Username: </label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <input
+          type="text"
+          id="first"
+          name="first"
+          placeholder="Enter your Username"
+          required
+        />
+        <br /><br />
+
+        <label for="password"> Password: </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter your Password"
+          required
+        />
+
+        <br /><br />
+
+        <label for="mobile"> Mobile No.: </label>&nbsp;&nbsp;&nbsp;
+        <input
+          type="text"
+          id="mobile"
+          name="mobile"
+          placeholder="Enter your Mobile No."
+          pattern="[0-9]{10}"
+          required
+        />
+        <br /><br />
+
+        <label for="role"> Role: </label>&nbsp;&nbsp;&nbsp;
+        <select id="role" name="role" required>
+          <option value="" disabled selected>Select your role</option>
+          <option value="user">User</option>
+          <option value="admin">Admin</option>
+        </select>
+        <br /><br />
+        
+        <div>
+          <button type="submit">Register</button>
+        </div>
+      </form>
+
+      <p>
+        Already registered?
+        <a href="./login.html"> Login to your account </a>
+      </p>
+    </div>
+  </body>
+</html>
