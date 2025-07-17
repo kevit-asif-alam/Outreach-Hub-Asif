@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Contacts Page</h1>
+    <p>Contacts of the ORG.</p>
+
+    <!-- List contacts (In table format with edit and delete actions) -->
+    <h2>Contact List</h2>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Actions</th>
+        </tr>
+        <tr>
+            <td>John Doe</td>
+            <td>
+                <a href="./contacts-details.html">john.doe@example.com</a>
+            </td>
+            <td>
+                <a href="./contacts-details.html">123-456-7890</a>
+            </td>
+            <td>
+                <a href="./contacts-edit.html">Edit</a>
+                <a href="./contacts-delete.html">Delete</a>
+            </td>
+        </tr>
+    </table>
+    <p>
+        <a href="./contacts-add.html">Add New Contact</a>
+    </p>
+
+    <!-- View contact details -->
+    <h2>Contact Details</h2>
+    <p>
+        <strong>Name:</strong> John Doe<br>
+        <strong>Email:</strong> john.doe@example.com<br>
+        <strong>Phone:</strong> 123-456-7890
+    </p>
+    <p>
+        <a href="./contacts-edit.html">Edit Contact</a>
+        <a href="./contacts-list.html">Back to List</a>
+    </p>
+
+    <!-- Add contact -->
+    <h2>Add New Contact</h2>
+    <form action="./contacts-list.html" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+        <br><br>
+        <button type="submit">Add Contact</button>
+    </form>
+</body>
+</html>
