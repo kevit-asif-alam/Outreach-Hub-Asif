@@ -1,0 +1,98 @@
+button,
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1rem;
+  border-radius: $radius-md;
+  border: 1px solid transparent;
+  background: $primary-600;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+button:hover,
+.btn:hover {
+  background: $primary-700;
+  transform: translateY(-1px);
+}
+button:focus-visible,
+.btn:focus-visible {
+  outline: 2px solid $primary-400;
+  outline-offset: 2px;
+}
+button.btn-secondary {
+  background: white;
+  color: $primary-700;
+  border-color: $primary-300;
+}
+button.btn-secondary:hover {
+  background: $primary-100;
+}
+form {
+  display: grid;
+  gap: $space-4;
+  max-width: 520px;
+}
+form div {
+  display: grid;
+  gap: 0.375rem;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+select {
+  border: 1px solid $primary-200;
+  border-radius: $radius-md;
+  padding: 0.6rem 0.8rem;
+  background: white;
+}
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid $primary-400;
+  outline-offset: 2px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border: 1px solid $primary-100;
+  border-radius: $radius-lg;
+  overflow: hidden;
+}
+thead {
+  background: $primary-50;
+}
+th,
+td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid $primary-100;
+  text-align: left;
+}
+tbody tr:hover {
+  background: $primary-50;
+}
+[aria-label="Contacts pagination"] ul {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  padding: $space-4 0;
+}
+[aria-label="Contacts pagination"] a {
+  display: inline-block;
+  padding: 0.35rem 0.7rem;
+  border-radius: $radius-sm;
+  border: 1px solid $primary-200;
+}
+[aria-label="Contacts pagination"] a[aria-current="page"] {
+  background: $primary-200;
+  border-color: $primary-300;
+}
+.muted {
+  color: $color-muted;
+}
+.fade-in {
+  animation: fade-in 0.45s ease both;
+}
