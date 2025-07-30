@@ -1,41 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-</head>
-<body>
-    <div>
-        <h1>Outreach Hub</h1>
-        <h3>Login</h3>
-
-        <form action="./index.html" method="get">
-            <label for="first">
-                Username:
-            </label>&nbsp;&nbsp;&nbsp;
-            <input type="text" id="first" name="first" 
-                placeholder="Enter your Username" required>
-            <br><br>
-            
-            <label for="password">
-                Password:
-            </label>&nbsp;&nbsp;&nbsp;
-            <input type="password" id="password" name="password" 
-                placeholder="Enter your Password" required>
-            <br><br>
-            <div>
-                <button type="submit">
-                    Submit
-                </button>
-            </div>
-        </form>
-        
-        <p>Not registered?
-            <a href="./signup.html">
-                Create an account
-            </a>
-        </p>
-    </div>
-</body>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>OutreachHub – Login</title>
+  </head>
+  <body>
+    <main id="main">
+      <h1>Login</h1>
+      <form action="home.html" method="get">
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required autocomplete="username"/>
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" required autocomplete="current-password"/>
+        </div>
+        <div>
+          <button type="submit">Sign in</button>
+        </div>
+      </form>
+    </main>
+  </body>
 </html>
