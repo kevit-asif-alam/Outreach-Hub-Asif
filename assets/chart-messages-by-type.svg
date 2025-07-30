@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="240" role="img" aria-labelledby="t2">
+  <title id="t2">Placeholder: Messages by type per day chart</title>
+  <rect x="1" y="1" width="638" height="238" fill="white" stroke="black" stroke-width="2"/>
+  <text x="20" y="30" font-size="16" fill="black">Messages by type per day (placeholder)</text>
+  <line x1="60" y1="200" x2="600" y2="200" stroke="black"/>
+  <line x1="60" y1="40" x2="60" y2="200" stroke="black"/>
+</svg>

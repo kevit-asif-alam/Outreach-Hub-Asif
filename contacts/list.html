@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>OutreachHub – Contacts</title>
+  </head>
+  <body>
+    <header>
+  <!-- <a class="skip-link" href="#main">Skip to main content</a> -->
+  <div class="brand">
+    <img src="assets/Logo.png" alt="OutreachHub logo" width="160" height="40"/>
+  </div>
+  <nav aria-label="Primary">
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="contacts/list.html" aria-current="page">Contacts</a></li>
+      <li><a href="login.html" rel="nofollow">Logout</a></li>
+    </ul>
+  </nav>
+</header>
+    <main id="main">
+      <h1>Contacts</h1>
+      <p><a href="create.html">Create new contact</a></p>
+      <table>
+        <caption>Contacts list</caption>
+        <thead>
+          <tr><th scope="col">Name</th><th scope="col">Phone</th><th scope="col">Tags</th><th scope="col">Actions</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="details.html">Jane Doe</a></td>
+            <td>+91 90000 00000</td>
+            <td>customers, warm-leads</td>
+            <td>
+              <a href="edit.html">Edit</a> ·
+              <a href="list.html">Delete</a>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="details.html">John Smith</a></td>
+            <td>+91 80000 00000</td>
+            <td>promo</td>
+            <td>
+              <a href="edit.html">Edit</a> ·
+              <a href="list.html">Delete</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <nav aria-label="Contacts pagination">
+        <ul>
+          <li><a href="?page=1">Prev</a></li>
+          <li><a href="?page=1">1</a></li>
+          <li><a href="?page=2" aria-current="page">2</a></li>
+          <li><a href="?page=3">3</a></li>
+          <li><a href="?page=3">Next</a></li>
+        </ul>
+      </nav>
+    </main>
+  </body>
+</html>
