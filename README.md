@@ -84,5 +84,5 @@ Accessible only by **workspace users**, with role-based permissions:
 
 = Note: Only campaigns in **draft** state are editable. Launched campaigns are immutable.
 
-- Author: [ASIF ALAM](https://github.com/as-if-it)
+- Author: [ASIF ALAM](https://github.com/kevit-asif-alam)
 ---
