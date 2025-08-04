@@ -4,33 +4,35 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>OutreachHub – Home</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
-    <header>
+    <header class="site-header">
       <!-- <a class="skip-link" href="#main">Skip to main content</a> -->
       <div class="brand">
         <img
-          src="assets/Logo.png"
+          src="../assets/Logo.png"
           alt="OutreachHub logo"
           width="160"
           height="40"
         />
       </div>
-      <nav aria-label="Primary">
+      <nav class="primary-nav" aria-label="Primary">
         <ul>
-          <li><a href="home.html" aria-current="page">Home</a></li>
-          <li><a href="contacts/list.html">Contacts</a></li>
-          <li><a href="login.html" rel="nofollow">Logout</a></li>
+          <li><a href="./home.html" aria-current="page">Home</a></li>
+          <li><a href="./contacts/list.html">Contacts</a></li>
+          <li><a href="./login.html" rel="nofollow">Logout</a></li>
         </ul>
       </nav>
     </header>
+    <div class="container">
     <main id="main">
       <h1>Welcome to OutreachHub</h1>
       <section aria-labelledby="brand-heading">
         <!-- <h2 id="brand-heading">Branding</h2> -->
         <p>Welcome back! This is your workspace overview.</p>
         <img
-          src="assets/Logo.png"
+          src="./assets/Logo.png"
           alt="OutreachHub brand"
           width="320"
           height="80"
@@ -41,21 +43,21 @@
         <h2 id="analytics-heading">Workspace Analytics (Placeholders)</h2>
         <figure>
           <img
-            src="assets/chart-campaigns-per-day.svg"
+            src="./assets/chart-campaigns-per-day.svg"
             alt="Placeholder chart: campaigns per day"
           />
           <figcaption>Number of campaigns per day.</figcaption>
         </figure>
         <figure>
           <img
-            src="assets/chart-messages-by-type.svg"
+            src="./assets/chart-messages-by-type.svg"
             alt="Placeholder chart: messages by type per day"
           />
           <figcaption>Messages by type per day.</figcaption>
         </figure>
         <figure>
           <img
-            src="assets/chart-contacts-reached.svg"
+            src="./assets/chart-contacts-reached.svg"
             alt="Placeholder chart: contacts reached per day"
           />
           <figcaption>Contacts reached per day.</figcaption>
@@ -148,5 +150,6 @@
         </table>
       </section>
     </main>
+    </div>
   </body>
 </html>

@@ -1,0 +1,26 @@
+@mixin respond($bp) {
+  @if $bp==sm {
+    @media (min-width: $bp-sm) {
+      @content;
+    }
+  }
+  @if $bp==md {
+    @media (min-width: $bp-md) {
+      @content;
+    }
+  }
+  @if $bp==lg {
+    @media (min-width: $bp-lg) {
+      @content;
+    }
+  }
+  @if $bp==xl {
+    @media (min-width: $bp-xl) {
+      @content;
+    }
+  }
+}
+@mixin focus-ring {
+  outline: 2px solid $primary-400;
+  outline-offset: 2px;
+}

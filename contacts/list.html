@@ -1,31 +1,45 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../styles/styles.css" />
     <title>OutreachHub – Contacts</title>
   </head>
   <body>
-    <header>
-  <!-- <a class="skip-link" href="#main">Skip to main content</a> -->
-  <div class="brand">
-    <img src="assets/Logo.png" alt="OutreachHub logo" width="160" height="40"/>
-  </div>
-  <nav aria-label="Primary">
-    <ul>
-      <li><a href="home.html">Home</a></li>
-      <li><a href="contacts/list.html" aria-current="page">Contacts</a></li>
-      <li><a href="login.html" rel="nofollow">Logout</a></li>
-    </ul>
-  </nav>
-</header>
+    <header class="site-header">
+      <!-- <a class="skip-link" href="#main">Skip to main content</a> -->
+      <div class="brand">
+        <img
+          src="../assets/Logo.png"
+          alt="OutreachHub logo"
+          width="160"
+          height="40"
+        />
+      </div>
+      <nav class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="contacts/list.html" aria-current="page">Contacts</a></li>
+          <li><a href="login.html" rel="nofollow">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
     <main id="main">
       <h1>Contacts</h1>
       <p><a href="create.html">Create new contact</a></p>
       <table>
-        <caption>Contacts list</caption>
+        <caption>
+          Contacts list
+        </caption>
         <thead>
-          <tr><th scope="col">Name</th><th scope="col">Phone</th><th scope="col">Tags</th><th scope="col">Actions</th></tr>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Tags</th>
+            <th scope="col">Actions</th>
+          </tr>
         </thead>
         <tbody>
           <tr>
@@ -59,5 +73,6 @@
         </ul>
       </nav>
     </main>
+    </div>
   </body>
 </html>
