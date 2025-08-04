@@ -1,46 +1,69 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="./styles/styles.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../styles/styles.css" />
     <title>OutreachHub – Edit Contact</title>
   </head>
   <body>
-    <header>
-  <!-- <a class="skip-link" href="#main">Skip to main content</a> -->
-  <div class="brand">
-    <img src="assets/Logo.png" alt="OutreachHub logo" width="160" height="40"/>
-  </div>
-  <nav aria-label="Primary">
-    <ul>
-      <li><a href="home.html">Home</a></li>
-      <li><a href="contacts/list.html" aria-current="page">Contacts</a></li>
-      <li><a href="login.html" rel="nofollow">Logout</a></li>
-    </ul>
-  </nav>
-</header>
-    <main id="main">
-      <h1>Edit contact</h1>
-      <form action="details.html" method="get">
-        <div>
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" value="Jane Doe" required/>
-        </div>
-        <div>
-          <label for="phone">Phone</label>
-          <input id="phone" name="phone" type="tel" value="+91 90000 00000" required/>
-        </div>
-        <div>
-          <label for="tags">Tags (comma-separated)</label>
-          <input id="tags" name="tags" type="text" value="customers, warm-leads"/>
-        </div>
-        <div>
-          <button type="submit">Save changes</button>
-          <a href="details.html">Cancel</a>
-        </div>
-      </form>
-      <p><small>Static for HTML module; JS module will call Update API and route to the updated contact's details.</small></p>
-    </main>
+    <header class="site-header">
+      <!-- <a class="skip-link" href="#main">Skip to main content</a> -->
+      <div class="brand">
+        <img
+          src="../assets/Logo.png"
+          alt="OutreachHub logo"
+          width="160"
+          height="40"
+        />
+      </div>
+      <nav class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="contacts/list.html" aria-current="page">Contacts</a></li>
+          <li><a href="login.html" rel="nofollow">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <main id="main">
+        <h1>Edit contact</h1>
+        <form action="details.html" method="get">
+          <div>
+            <label for="name">Name</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              value="Jane Doe"
+              required
+            />
+          </div>
+          <div>
+            <label for="phone">Phone</label>
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              value="+91 90000 00000"
+              required
+            />
+          </div>
+          <div>
+            <label for="tags">Tags (comma-separated)</label>
+            <input
+              id="tags"
+              name="tags"
+              type="text"
+              value="customers, warm-leads"
+            />
+          </div>
+          <div>
+            <button type="submit">Save changes</button>
+            <a href="details.html">Cancel</a>
+          </div>
+        </form>
+      </main>
+    </div>
   </body>
 </html>

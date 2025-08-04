@@ -1,28 +1,70 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>OutreachHub – Login</title>
     <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
-    <main id="main">
-      <h1>Login</h1>
-      <form action="home.html" method="get">
-        <div>
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" required autocomplete="username"/>
-        </div>
-        <div>
-          <label for="password">Password</label>
-          <input id="password" name="password" type="password" required autocomplete="current-password"/>
-        </div>
-        <div>
-          <button type="submit">Sign in</button>
-          If you don't have an account, <a href="./signup.html">Sign up</a>
-        </div>
-      </form>
-    </main>
+    <header class="site-header">
+      <a class="skip-link" href="#main">Skip to main content</a>
+      <div class="brand">
+        <img
+          src="./assets/Logo.png"
+          alt="OutreachHub logo"
+          width="160"
+          height="140"
+        />
+      </div>
+      <!-- <nav class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="./home.html">Home</a></li>
+          <li><a href="./contacts/list.html">Contacts</a></li>
+          <li><a href="./contacts/list.html">About</a></li>
+          <li><a href="#">Help</a></li>
+          <li><a href="./login.html">Logout</a></li>
+        </ul>
+      </nav> -->
+    </header>
+    <div class="container">
+      <main id="main">
+        <h1>Login</h1>
+        <form action="./home.html" method="get">
+          <div>
+            <label for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              autocomplete="username"
+            />
+          </div>
+          <div>
+            <label for="password">Password</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              required
+              autocomplete="current-password"
+            />
+          </div>
+          <div>
+            <button type="submit">Sign in</button>
+            If you don't have an account, <a href="./signup.html">Sign up</a>
+          </div>
+        </form>
+      </main>
+    </div>
+
+    <!-- For future use -->
+    <div class="container">
+      <main id="main">
+        <h1>Image</h1>
+        <img src="./assets/Logo.png" alt="Sample" width="600" height="400" />
+      </main>
+    </div>
   </body>
 </html>
