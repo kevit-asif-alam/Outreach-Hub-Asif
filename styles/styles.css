@@ -8,18 +8,9 @@
   margin: 0;
 }
 
-html:focus-within {
-  scroll-behavior: smooth;
-}
-
 html,
 body {
   height: 100%;
-}
-
-body {
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
 }
 
 img,
@@ -294,5 +285,3 @@ tbody tr:hover {
 .fade-in {
   animation: fade-in 0.45s ease both;
 }
-
-/*# sourceMappingURL=styles.css.map */

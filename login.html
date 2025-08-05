@@ -17,24 +17,16 @@
           height="140"
         />
       </div>
-      <!-- <nav class="primary-nav" aria-label="Primary">
-        <ul>
-          <li><a href="./home.html">Home</a></li>
-          <li><a href="./contacts/list.html">Contacts</a></li>
-          <li><a href="./contacts/list.html">About</a></li>
-          <li><a href="#">Help</a></li>
-          <li><a href="./login.html">Logout</a></li>
-        </ul>
-      </nav> -->
     </header>
+
     <div class="container">
       <main id="main">
         <h1>Login</h1>
-        <form>
+        <form id="login-form">
           <div>
-            <label for="username">Username</label>
+            <label for="login-name">Username</label>
             <input
-              id="username"
+              id="login-name"
               name="username"
               type="text"
               required
@@ -42,9 +34,9 @@
             />
           </div>
           <div>
-            <label for="password">Password</label>
+            <label for="login-password">Password</label>
             <input
-              id="password"
+              id="login-password"
               name="password"
               type="password"
               required
@@ -59,15 +51,6 @@
       </main>
     </div>
 
-    <!-- For future use -->
-    <!-- <div class="container">
-      <main id="main">
-        <h1>Image</h1>
-        <img src="./assets/Logo.png" alt="Sample" width="600" height="400" />
-      </main>
-    </div> -->
-
-    <script type="module" src="./js/utils.js"></script>
-    <script type="module" src="./js/auth.js"></script>
+    <script src="./js/auth.js"></script>
   </body>
 </html>

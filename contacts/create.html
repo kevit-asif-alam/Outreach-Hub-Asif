@@ -20,38 +20,45 @@
       <nav class="primary-nav" aria-label="Primary">
         <ul>
           <li><a href="../home.html">Home</a></li>
-          <li><a aria-current="page" href="./list.html" aria-current="page">Contacts</a></li>
+          <li>
+            <a aria-current="page" href="./list.html" aria-current="page"
+              >Contacts</a
+            >
+          </li>
           <li><a href="../login.html" rel="nofollow">Logout</a></li>
         </ul>
       </nav>
     </header>
     <div class="container">
-    <main id="main">
-      <h1>Create contact</h1>
-      <form action="./details.html" method="get">
-        <div>
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" required />
-        </div>
-        <div>
-          <label for="phone">Phone</label>
-          <input id="phone" name="phone" type="tel" required />
-        </div>
-        <div>
-          <label for="tags">Tags (comma-separated)</label>
-          <input
-            id="tags"
-            name="tags"
-            type="text"
-            placeholder="customers, warm-leads"
-          />
-        </div>
-        <div>
-          <button type="submit">Create</button>
-          <a href="list.html">Cancel</a>
-        </div>
-      </form>
-    </main>
+      <main id="main">
+        <h1>Create contact</h1>
+        <form action="./details.html" method="get">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required />
+          </div>
+          <div>
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" required />
+          </div>
+          <div>
+            <label for="tags">Tags (comma-separated)</label>
+            <input
+              id="tags"
+              name="tags"
+              type="text"
+              placeholder="customers, warm-leads"
+            />
+          </div>
+          <div>
+            <button type="submit">Create</button>
+            <a href="list.html">Cancel</a>
+          </div>
+        </form>
+      </main>
     </div>
+
+    <script src="../js/utils.js"></script>
+    <script src="../js/main.js"></script>
   </body>
 </html>

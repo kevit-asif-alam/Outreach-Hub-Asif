@@ -1,5 +1,5 @@
 // utils.js
-const API = "http://localhost:3001";
+const API = "http://localhost:3000";
 
 export function getToken() {
   return localStorage.getItem("token");
