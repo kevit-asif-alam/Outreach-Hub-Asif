@@ -56,6 +56,42 @@ select:focus-visible {
   outline: 2px solid $primary-400;
   outline-offset: 2px;
 }
+// Message styles for success/error notifications
+.message {
+  padding: 0.75rem 1rem;
+  border-radius: $radius-md;
+  margin-bottom: $space-4;
+  font-weight: 500;
+}
+
+.message.success {
+  background-color: #d1fae5;
+  border: 1px solid #10b981;
+  color: #065f46;
+}
+
+.message.error {
+  background-color: #fee2e2;
+  border: 1px solid #ef4444;
+  color: #991b1b;
+}
+
+// Delete button styling
+.delete-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: $radius-sm;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;

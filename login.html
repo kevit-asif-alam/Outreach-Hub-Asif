@@ -17,34 +17,26 @@
           height="140"
         />
       </div>
-      <!-- <nav class="primary-nav" aria-label="Primary">
-        <ul>
-          <li><a href="./home.html">Home</a></li>
-          <li><a href="./contacts/list.html">Contacts</a></li>
-          <li><a href="./contacts/list.html">About</a></li>
-          <li><a href="#">Help</a></li>
-          <li><a href="./login.html">Logout</a></li>
-        </ul>
-      </nav> -->
     </header>
+
     <div class="container">
       <main id="main">
         <h1>Login</h1>
-        <form action="./home.html" method="get">
+        <form id="login-form">
           <div>
-            <label for="email">Email</label>
+            <label for="login-name">Username</label>
             <input
-              id="email"
-              name="email"
-              type="email"
+              id="login-name"
+              name="username"
+              type="text"
               required
               autocomplete="username"
             />
           </div>
           <div>
-            <label for="password">Password</label>
+            <label for="login-password">Password</label>
             <input
-              id="password"
+              id="login-password"
               name="password"
               type="password"
               required
@@ -59,12 +51,6 @@
       </main>
     </div>
 
-    <!-- For future use -->
-    <div class="container">
-      <main id="main">
-        <h1>Image</h1>
-        <img src="./assets/Logo.png" alt="Sample" width="600" height="400" />
-      </main>
-    </div>
+    <script src="./js/auth.js"></script>
   </body>
 </html>
