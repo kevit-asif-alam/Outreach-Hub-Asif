@@ -1,4 +1,3 @@
-// // auth.js
 // import { apiRequest, setToken } from './utils.js';
 
 // document.addEventListener('DOMContentLoaded', () => {
@@ -25,7 +24,6 @@
 // });
 
 
-// auth.js
 let loginForm = document.getElementById("login-form");
 let loginNameInput = document.getElementById("login-name");
 let loginPasswordInput = document.getElementById("login-password");

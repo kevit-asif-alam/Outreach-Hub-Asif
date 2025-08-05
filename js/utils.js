@@ -37,5 +37,23 @@ export async function apiRequest(endpoint, method = "GET", body = null) {
     const err = await res.json().catch(() => ({}));
     throw new Error(err.message || "API Error");
   }
-  return res.status !== 204 ? res.json() : {};
+  // Handle empty responses (204 No Content or 200 with empty body)
+  if (res.status === 204) {
+    return {};
+  }
+  
+  // Check if response has content
+  const contentLength = res.headers.get('content-length');
+  if (contentLength === '0') {
+    return {};
+  }
+  
+  // Try to parse JSON, return empty object if parsing fails
+  try {
+    const text = await res.text();
+    return text ? JSON.parse(text) : {};
+  } catch (error) {
+    console.warn('Failed to parse response as JSON:', error);
+    return {};
+  }
 }
