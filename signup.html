@@ -1,65 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Signup</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OutreachHub – Sign Up</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
-    <div>
-      <h1>Outreach Hub</h1>
-      <h3>Register</h3><hr>
-
-      <form action="./index.html" method="get">
-        <label for="first"> Username: </label>&nbsp;&nbsp;&nbsp;&nbsp;
-        <input
-          type="text"
-          id="first"
-          name="first"
-          placeholder="Enter your Username"
-          required
+    <header class="site-header">
+      <a class="skip-link" href="#main">Skip to main content</a>
+      <div class="brand">
+        <img
+          src="./assets/Logo.png"
+          alt="OutreachHub logo"
+          width="160"
+          height="140"
         />
-        <br /><br />
-
-        <label for="password"> Password: </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input
-          type="password"
-          id="password"
-          name="password"
-          placeholder="Enter your Password"
-          required
-        />
-
-        <br /><br />
-
-        <label for="mobile"> Mobile No.: </label>&nbsp;&nbsp;&nbsp;
-        <input
-          type="text"
-          id="mobile"
-          name="mobile"
-          placeholder="Enter your Mobile No."
-          pattern="[0-9]{10}"
-          required
-        />
-        <br /><br />
-
-        <label for="role"> Role: </label>&nbsp;&nbsp;&nbsp;
-        <select id="role" name="role" required>
-          <option value="" disabled selected>Select your role</option>
-          <option value="user">User</option>
-          <option value="admin">Admin</option>
-        </select>
-        <br /><br />
-        
-        <div>
-          <button type="submit">Register</button>
-        </div>
-      </form>
-
-      <p>
-        Already registered?
-        <a href="./login.html"> Login to your account </a>
-      </p>
+      </div>
+    </header>
+    <div class="container">
+      <main id="main">
+        <h1>Sign Up</h1>
+        <form action="./index.html" method="get">
+          <div>
+            <label for="username">Username</label>
+            <input
+              id="username"
+              name="username"
+              type="text"
+              required
+              autocomplete="username"
+              placeholder="Enter your username"
+            />
+          </div>
+          <div>
+            <label for="password">Password</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              required
+              autocomplete="new-password"
+              placeholder="Enter your password"
+            />
+          </div>
+          <div>
+            <label for="mobile">Mobile Number</label>
+            <input
+              id="mobile"
+              name="mobile"
+              type="tel"
+              pattern="[0-9]{10}"
+              required
+              placeholder="Enter your mobile number"
+            />
+          </div>
+          <div>
+            <label for="role">Role</label>
+            <select id="role" name="role" required>
+              <option value="" disabled selected>Select your role</option>
+              <option value="editor">Editor</option>
+              <option value="viewer">Viewer</option>
+            </select>
+          </div>
+          <div>
+            <button type="submit">Sign Up</button>
+            <p class="form-footer">
+              Already have an account? <a href="./login.html">Sign in</a>
+            </p>
+          </div>
+        </form>
+      </main>
     </div>
+
+    <script type="module" src="./js/utils.js"></script>
+    <script type="module" src="./js/auth.js"></script>
   </body>
 </html>
