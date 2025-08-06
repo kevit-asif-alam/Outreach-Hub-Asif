@@ -75,3 +75,4 @@ campaigns ||--o{ campaignMessages : generates
 contacts ||--o{ campaignMessages : receives
 @enduml
 
+

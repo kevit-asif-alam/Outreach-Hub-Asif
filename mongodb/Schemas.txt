@@ -9,7 +9,7 @@ adminUser
   _id: ObjectId,
   name: String,
   password: String,
-  phoneNo: Number,
+  phoneNo: String,
   email: String,    // unique
   created_at: Date,
   updated_at: Date,
@@ -41,7 +41,7 @@ workspaceUsers
   email: String,
   password: String, // hashed
   name: String,
-  role: String, // "Editor/Admin" or "Viewer"
+  role: String, // "Editor" or "Viewer"
   created_at: Date,
   updated_at: Date,
   is_active: Boolean,
@@ -139,11 +139,7 @@ campaignMessage
   message_snapshot: {
     template_name: String,
     template_type: String,
-    content: {
-      text: String,
-      image_url: String,
-      image_alt: String
-    }
+    reply_content: String,
   },
   
   status: String, // "pending", "sent", "delivered", "failed"
@@ -154,3 +150,18 @@ campaignMessage
   created_at: Date,
   updated_at: Date
 }
+
+
+--------------------------------------------------------------------------------------------------------
+## Database Collections
+
+| Collection 		        | Purpose 		        | Multi-Tenant 	| Key Indexes 				                  |
+|------------		        |---------		        |--------------	|-------------				                  |
+| `admin_users` 	        | System administrators | No 		        | email (unique) 			                  |
+| `workspaces` 		        | Business tenants 	    | No 		        | name, created_by 			                |
+| `workspace_users` 	    | Workspace members 	| Yes 		      | workspace_id + email (unique) 	      |
+| `contacts` 		        | Customer contacts 	| Yes 		      | workspace_id + phone_number (unique) 	|
+| `message_templates` 	    | Campaign templates 	| Yes 		      | workspace_id + name 			            |
+| `campaigns` 		        | Marketing campaigns 	| Yes 		      | workspace_id + status 		            |
+| `campaign_messages` 	    | Individual messages 	| Yes 		      | workspace_id + campaign_id 		        |
+
