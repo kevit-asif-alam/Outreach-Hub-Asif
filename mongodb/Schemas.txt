@@ -1,0 +1,167 @@
+# Outreach-Hub - Schemas
+
+All collections (except admin_users and workspaces) include `workspace_id` field for data isolation.
+
+---
+
+adminUser
+{
+  _id: ObjectId,
+  name: String,
+  password: String,
+  phoneNo: String,
+  email: String,    // unique
+  created_at: Date,
+  updated_at: Date,
+}
+
+---
+
+workspaces
+{
+  _id: ObjectId,
+  name: String,
+  description: String,
+  created_by: ObjectId, // reference to admin_users._id
+  created_at: Date,
+  updated_at: Date,
+  is_active: Boolean,
+  settings: {
+    timezone: String,
+    currency: String,
+  }
+}
+
+---
+
+workspaceUsers
+{
+  _id: ObjectId,
+  workspace_id: ObjectId, // reference to workspaces._id
+  email: String,
+  password: String, // hashed
+  name: String,
+  role: String, // "Editor" or "Viewer"
+  created_at: Date,
+  updated_at: Date,
+  is_active: Boolean,
+  last_login: Date
+}
+
+---
+
+contacts
+{
+  _id: ObjectId,
+  workspace_id: ObjectId, // reference to workspaces._id
+  phone_number: String, // primary identifier
+  name: String,
+  email: String,
+  tags: [String], // array of tag names for campaign targeting
+  additional_info: {
+    company: String,
+    position: String,
+    notes: String,
+  },
+  created_by: ObjectId, // reference to workspace_users._id
+  created_at: Date,
+  updated_at: Date,
+  is_active: Boolean
+}
+
+---
+
+messageTemplate
+{
+  _id: ObjectId,
+  workspace_id: ObjectId, // reference to workspaces._id
+  name: String,
+  type: String, // "Text" or "Text & Image"
+  content: {
+    text: String,
+    image_url: String, // only for "Text & Image" type
+    image_alt: String // alt text for image
+  },
+  created_by: ObjectId, // reference to workspace_users._id
+  created_at: Date,
+  updated_at: Date,
+  is_active: Boolean
+}
+
+---
+
+campaigns
+{
+  _id: ObjectId,
+  workspace_id: ObjectId, // reference to workspaces._id
+  name: String,
+  description: String,
+  status: String, // "draft", "running", "completed"
+  target_tags: [String], // tags to target for contacts
+  message_template_id: ObjectId, // reference to message_templates._id
+  
+  config: {
+    scheduled_at: Date, // when to launch (optional)
+    priority: String, // "high", "medium", "low"
+  },
+  
+  stats: {
+    total_contacts: Number,
+    messages_sent: Number,
+    messages_delivered: Number,
+    messages_failed: Number
+  },
+  
+  created_by: ObjectId, // reference to workspace_users._id
+  created_at: Date,
+  updated_at: Date,
+  launched_at: Date,
+  completed_at: Date,
+  is_active: Boolean
+}
+
+---
+
+campaignMessage
+{
+  _id: ObjectId,
+  workspace_id: ObjectId, // reference to workspaces._id
+  campaign_id: ObjectId, // reference to campaigns._id
+  contact_id: ObjectId, // reference to contacts._id
+  
+  contact_snapshot: {
+    phone_number: String,
+    name: String,
+    email: String,
+    tags: [String]
+  },
+  
+  message_snapshot: {
+    template_name: String,
+    template_type: String,
+    reply_content: String,
+  },
+  
+  status: String, // "pending", "sent", "delivered", "failed"
+  sent_at: Date,
+  delivered_at: Date,
+  error_message: String, // if status is "failed"
+  
+  created_at: Date,
+  updated_at: Date
+}
+
+
+--------------------------------------------------------------------------------------------------------
+## Database Collections
+
+| Collection 		        | Purpose 		        | Multi-Tenant 	| Key Indexes 				                  |
+|------------		        |---------		        |--------------	|-------------				                  |
+| `admin_users` 	        | System administrators | No 		        | email (unique) 			                  |
+| `workspaces` 		        | Business tenants 	    | No 		        | name, created_by 			                |
+| `workspace_users` 	    | Workspace members 	| Yes 		      | workspace_id + email (unique) 	      |
+| `contacts` 		        | Customer contacts 	| Yes 		      | workspace_id + phone_number (unique) 	|
+| `message_templates` 	    | Campaign templates 	| Yes 		      | workspace_id + name 			            |
+| `campaigns` 		        | Marketing campaigns 	| Yes 		      | workspace_id + status 		            |
+| `campaign_messages` 	    | Individual messages 	| Yes 		      | workspace_id + campaign_id 		        |
+

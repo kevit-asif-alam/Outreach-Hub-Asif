@@ -1,0 +1,78 @@
+// plantuml.biz
+
+@startuml
+entity "adminUsers" {
+  _id : ObjectId
+  username : String
+  passwordHash : String
+  role : "admin"
+  createdAt : Date
+}
+
+entity "workspaces" {
+  _id : ObjectId
+  name : String
+  description : String
+  createdAt : Date
+}
+
+entity "workspaceUsers" {
+  _id : ObjectId
+  workspaceId : ObjectId
+  username : String
+  passwordHash : String
+  role : "editor" | "viewer"
+  createdAt : Date
+}
+
+entity "contacts" {
+  _id : ObjectId
+  workspaceId : ObjectId
+  name : String
+  phoneNumber : String
+  tags : [String]
+  createdAt : Date
+}
+
+entity "messageTemplates" {
+  _id : ObjectId
+  workspaceId : ObjectId
+  name : String
+  type : "text" | "text-image"
+  text : String
+  imageUrl : String
+  createdAt : Date
+}
+
+entity "campaigns" {
+  _id : ObjectId
+  workspaceId : ObjectId
+  name : String
+  tagFilters : [String]
+  templateId : ObjectId
+  status : "draft" | "running" | "completed"
+  createdAt : Date
+}
+
+entity "campaignMessages" {
+  _id : ObjectId
+  workspaceId : ObjectId
+  campaignId : ObjectId
+  contactId : ObjectId
+  templateSnapshot : object
+  contactSnapshot : object
+  sentAt : Date
+  status : "pending" | "sent" | "failed"
+}
+
+' Relationships
+workspaces ||--o{ workspaceUsers : has
+workspaces ||--o{ contacts : has
+workspaces ||--o{ messageTemplates : has
+workspaces ||--o{ campaigns : has
+campaigns ||--|| messageTemplates : uses
+campaigns ||--o{ campaignMessages : generates
+contacts ||--o{ campaignMessages : receives
+@enduml
+
+
