@@ -1,0 +1,55 @@
+Admin Portal
+    Auth
+        POST /admin/auth/login
+        POST /admin/auth/logout
+
+    Workspaces
+        GET /admin/workspaces
+        POST /admin/workspaces
+        GET /admin/workspaces/:id
+        PUT /admin/workspaces/:id
+        DELETE /admin/workspaces/:id
+
+    Workspace Users
+        GET /admin/workspaces/:id/users
+        POST /admin/workspaces/:id/users
+        GET /admin/workspaces/:id/users/:userId
+        PUT /admin/workspaces/:id/users/:userId
+        DELETE /admin/workspaces/:id/users/:userId
+
+---------------------------------------------------------------------
+
+OutreachHub Portal (Workspace Users)
+    Auth
+        POST /auth/login
+        POST /auth/logout
+
+    Contacts
+        GET /contacts
+        GET /contacts/:id
+        POST /contacts
+        PUT /contacts/:id
+        DELETE /contacts/:id
+
+    Templats
+        GET /templates
+        POST /templates
+        GET /templates/:id
+        PUT /templates/:id
+        DELETE /templates/:id
+
+    Campaigns
+        GET /campaigns
+        POST /campaigns
+        GET /campaigns/:id
+        PUT /campaigns/:id
+        DELETE /campaigns/:id
+        POST /campaigns/:id/launch
+        POST /campaigns/:id/copy
+
+    Analytics
+        (Optional but suggested)
+        GET /analytics/campaigns
+        GET /analytics/messages
+        GET /analytics/contacts
+        
