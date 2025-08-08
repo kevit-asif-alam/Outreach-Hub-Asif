@@ -9,7 +9,7 @@ app.use(express.json());
 
 // Routes
 app.use("/admin/auth", require("./routes/admin.auth.routes"));
-app.use("/auth", require("./routes/user.auth.routes"));
+// app.use("/auth", require("./routes/user.auth.routes"));
 
 // MongoDB connection
 mongoose.connect("mongodb://localhost:27017/outreachhub", {
