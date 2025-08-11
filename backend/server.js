@@ -9,7 +9,9 @@ app.use(express.json());
 
 // Routes
 app.use("/admin/auth", require("./routes/admin.auth.routes"));
-// app.use("/auth", require("./routes/user.auth.routes"));
+app.use("/auth", require("./routes/user.auth.routes"));
+app.use("/admin/contacts", require("./routes/admin.contacts.routes"));
+app.use("/contacts", require("./routes/user.contacts.routes"));
 
 // MongoDB connection
 mongoose.connect("mongodb://localhost:27017/outreachhub", {
@@ -21,5 +23,5 @@ mongoose.connect("mongodb://localhost:27017/outreachhub", {
 // Server start
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Server started on port ${PORT}`);
+  console.log(`Server ${PORT}`);
 });
