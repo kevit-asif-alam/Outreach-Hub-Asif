@@ -12,6 +12,9 @@ app.use("/admin/auth", require("./routes/admin.auth.routes"));
 app.use("/auth", require("./routes/user.auth.routes"));
 app.use("/admin/contacts", require("./routes/admin.contacts.routes"));
 app.use("/contacts", require("./routes/user.contacts.routes"));
+app.use("/admin/workspaces", require("./routes/admin.workspaces.routes"));
+app.use("/workspace", require("./routes/user.workspace.routes"));
+
 
 // MongoDB connection
 mongoose.connect("mongodb://localhost:27017/outreachhub", {
