@@ -23,34 +23,34 @@
 //   });
 // });
 
+// Commented for typescript conflict
+// let loginForm = document.getElementById("login-form");
+// let loginNameInput = document.getElementById("login-name");
+// let loginPasswordInput = document.getElementById("login-password");
 
-let loginForm = document.getElementById("login-form");
-let loginNameInput = document.getElementById("login-name");
-let loginPasswordInput = document.getElementById("login-password");
+// loginForm.addEventListener("submit", async (e) => {
+//   e.preventDefault();
 
-loginForm.addEventListener("submit", async (e) => {
-  e.preventDefault();
+//   try {
+//     const response = await fetch("http://localhost:3000/auth/login", {
+//       method: "POST",
+//       headers: { "Content-Type": "application/json" },
+//       body: JSON.stringify({
+//         username: loginNameInput.value,
+//         password: loginPasswordInput.value,
+//       }),
+//     });
 
-  try {
-    const response = await fetch("http://localhost:3000/auth/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        username: loginNameInput.value,
-        password: loginPasswordInput.value,
-      }),
-    });
+//     let data = await response.json();
 
-    let data = await response.json();
-
-    if (data.access_token) {
-      localStorage.setItem("token", data.access_token);
-      window.location.href = "./home.html"; // use "../home" if your file structure requires it
-    } else {
-      alert("Login failed. Please check your credentials.");
-    }
-  } catch (error) {
-    console.error("Error during login:", error);
-    alert("Something went wrong. Please try again.");
-  }
-});
+//     if (data.access_token) {
+//       localStorage.setItem("token", data.access_token);
+//       window.location.href = "./home.html"; // use "../home" if your file structure requires it
+//     } else {
+//       alert("Login failed. Please check your credentials.");
+//     }
+//   } catch (error) {
+//     console.error("Error during login:", error);
+//     alert("Something went wrong. Please try again.");
+//   }
+// });
