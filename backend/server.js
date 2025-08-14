@@ -14,6 +14,9 @@ app.use("/admin/contacts", require("./routes/admin.contacts.routes"));
 app.use("/contacts", require("./routes/user.contacts.routes"));
 app.use("/admin/workspaces", require("./routes/admin.workspaces.routes"));
 app.use("/workspace", require("./routes/user.workspace.routes"));
+app.use("/admin/campaigns", require("./routes/admin.campaigns.routes"));
+app.use("/campaigns", require("./routes/user.campaigns.routes"));
+
 
 
 // MongoDB connection
